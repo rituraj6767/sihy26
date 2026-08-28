@@ -1,0 +1,103 @@
+{
+  "expo": {
+    "name": "RescueNetAI",
+    "slug": "rescuenet-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "rescuenetai",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rescuenetai.app",
+      "icon": "./assets/expo.icon",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Allow RescueNetAI to access your GPS location for emergency and rescue operations.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow RescueNetAI to access your GPS location in the background for continuous rescue tracking.",
+        "NSBluetoothAlwaysUsageDescription": "Allow RescueNetAI to use Bluetooth to discover and communicate with nearby rescue devices.",
+        "NSBluetoothPeripheralUsageDescription": "Allow RescueNetAI to broadcast and communicate with peripheral devices in offline/mesh scenarios.",
+        "UIBackgroundModes": [
+          "remote-notification",
+          "location"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "package": "com.rescuenetai.app",
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN",
+        "BLUETOOTH_SCAN",
+        "BLUETOOTH_ADVERTISE",
+        "BLUETOOTH_CONNECT",
+        "NEARBY_WIFI_DEVICES",
+        "POST_NOTIFICATIONS",
+        "READ_PHONE_STATE",
+        "CALL_PHONE",
+        "SEND_SMS",
+        "RECEIVE_SMS",
+        "READ_SMS",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_BACKGROUND_LOCATION",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_LOCATION"
+      ]
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#208AEF",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 76
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow RescueNetAI to use your GPS location.",
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/splash-icon.png",
+          "color": "#208AEF"
+        }
+      ],
+      [
+        "react-native-maps",
+        {
+          "googleMapsApiKey": ""
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "c83780e9-f221-4253-86d5-20f80d79a669"
+      }
+    }
+  }
+}
